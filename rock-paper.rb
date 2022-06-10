@@ -18,8 +18,14 @@ if player == program
   return true
 elsif (player == 0 && program == 1) || (player == 1 && program == 2) || (player == 2 && program == 0)
   case_pattern = "自分が勝った場合"
+  puts "-----------------"
+  puts "あなたの勝ちです"
+  puts "-----------------"
 else
   case_pattern = "自分が負けた場合"
+  puts "-----------------"
+  puts "あなたの負けです"
+  puts "-----------------"
 end  
 
 case case_pattern
@@ -35,11 +41,13 @@ puts "あなた:手:#{directions[player_hand]}"
 puts "相手:顔:#{directions[program_hand]}"
 
 if player_hand == program_hand
+  puts "----------------"
   puts "あなたの勝ちです"
   return false
 else 
+  puts "----------------"
   puts "あなたの負けです"
-  return false
+  return true
 end
 when "自分が負けた場合"
   puts "あっち向いて〜"
@@ -52,9 +60,11 @@ directions =["上","右","下","左"]
 puts "あなた:顔:#{directions[player_hand]}"
 puts "相手:手:#{directions[program_hand]}"
   if player_hand != program_hand
+    puts "----------------"
     puts "あなたの勝ちです"
-    return false
+    return true
   else 
+    puts "----------------"
     puts "あなたの負けです"
     return false
   end
