@@ -3,7 +3,7 @@ puts "ジャンケン〜"
 puts "0:グー1:チョキ2:パー"
 player = gets.to_i #自分の手を入力するとコンソール上に返すメソッド
 
-program = rand(2) #ランダムに値を表示するメソッド
+program = rand(3) #ランダムに値を表示するメソッド
 #          0.       1.     2.  
 jankens=["グー","チョキ","パー"] #jankens配列に出す手を文字列で格納する
 
@@ -28,7 +28,7 @@ when "自分が勝った場合"
   puts "0:上1:右2:下3:左"
 player_hand = gets.to_i
 
-program_hand = rand(3)
+program_hand = rand(4)
 
 directions =["上","右","下","左"]
 puts "あなた:手:#{directions[player_hand]}"
